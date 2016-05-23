@@ -35,6 +35,10 @@ class VCMyContactsUI: UITableViewController {
         }
     }
     
+    @IBAction func onShowContacts(sender:AnyObject){
+        getContacts()
+    }
+    
     // MARK: - Contacts
     func getContacts() {
         let store = CNContactStore()
@@ -55,12 +59,16 @@ class VCMyContactsUI: UITableViewController {
             let predicate = CNContact.predicateForContactsInGroupWithIdentifier(groups[0].identifier)
             //let predicate = CNContact.predicateForContactsMatchingName("John")
             let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName), CNContactEmailAddressesKey]
-            
             let contacts = try store.unifiedContactsMatchingPredicate(predicate, keysToFetch: keysToFetch)
             self.objects = contacts
+            
+            //print(self.objects)
+            
+            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView.reloadData()
             })
+            
         } catch {
             print(error)
         }
@@ -78,7 +86,7 @@ class VCMyContactsUI: UITableViewController {
         return false
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
         
         let contact = self.objects[indexPath.row]
         let formatter = CNContactFormatter()
@@ -87,8 +95,5 @@ class VCMyContactsUI: UITableViewController {
         cell.detailTextLabel?.text = contact.emailAddresses.first?.value as? String
         
         return cell
-        
-        // Return false if you do not want the specified item to be editable.
-        //return false
     }
 }

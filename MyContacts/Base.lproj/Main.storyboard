@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4YV-YF-cMo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" id="4YV-YF-cMo">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4YV-YF-cMo" id="qaY-9l-tIC">
@@ -93,7 +93,13 @@
                             <outlet property="delegate" destination="xwj-wW-Aev" id="f9H-Gs-ijf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Contacts UI" id="qGP-h5-QkI"/>
+                    <navigationItem key="navigationItem" title="My Contacts UI" id="qGP-h5-QkI">
+                        <barButtonItem key="rightBarButtonItem" title="Show" id="FBQ-Lb-7hl">
+                            <connections>
+                                <action selector="onShowContacts:" destination="xwj-wW-Aev" id="SOz-IY-ezC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zl-V2-OSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
