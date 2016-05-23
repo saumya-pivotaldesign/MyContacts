@@ -8,7 +8,7 @@
         <!--Contacts-->
         <scene sceneID="cUX-Gn-BFi">
             <objects>
-                <viewController id="U3Q-Oz-jyq" sceneMemberID="viewController">
+                <viewController id="U3Q-Oz-jyq" customClass="VCContacts" customModule="MyContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8MO-ds-ZFG"/>
                         <viewControllerLayoutGuide type="bottom" id="fq6-r8-hHW"/>
@@ -21,6 +21,13 @@
                                 <rect key="frame" x="20" y="72" width="374" height="457"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1S-Ho-qzT">
+                                <rect key="frame" x="20" y="686" width="132" height="30"/>
+                                <state key="normal" title="Show Contacts UI"/>
+                                <connections>
+                                    <action selector="showContacts:" destination="U3Q-Oz-jyq" eventType="touchUpInside" id="kQH-3g-a5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
