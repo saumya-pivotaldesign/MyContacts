@@ -51,6 +51,6 @@ class VCContacts: UIViewController , UITextFieldDelegate, UIPickerViewDelegate, 
         print("contactPicker : didSelectContact")
         //delegate.didFetchContacts([contact])
         print([contact])
-        navigationController?.popViewControllerAnimated(true)
+        //navigationController?.popViewControllerAnimated(true)
     }
 }
