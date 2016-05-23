@@ -11,6 +11,9 @@ import UIKit
 import ContactsUI
 
 class VCContacts: UIViewController , UITextFieldDelegate, UIPickerViewDelegate, CNContactPickerDelegate {
+    
+    private let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //
@@ -30,8 +33,24 @@ class VCContacts: UIViewController , UITextFieldDelegate, UIPickerViewDelegate, 
     // displaying Native Contacts UI
     private func showNativeContactsUI(){
         let contactPickerViewController = CNContactPickerViewController()
+        
+        // Filter the contacts
         //contactPickerViewController.predicateForEnablingContact = NSPredicate(format: "birthday != nil")
+        
         contactPickerViewController.delegate = self
+        
+        // Display only what you need
+        //contactPickerViewController.displayedPropertyKeys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey]
+        
+        // Finally present the UI
         presentViewController(contactPickerViewController, animated: true, completion: nil)
+    }
+    
+    // single selection
+    func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
+        print("contactPicker : didSelectContact")
+        //delegate.didFetchContacts([contact])
+        print([contact])
+        navigationController?.popViewControllerAnimated(true)
     }
 }
