@@ -10,7 +10,7 @@ import UIKit
 
 import ContactsUI
 
-class VCContacts: UIViewController , UITextFieldDelegate, UIPickerViewDelegate, CNContactPickerDelegate {
+class VCContacts: UIViewController , CNContactPickerDelegate {
     
     private let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -46,11 +46,19 @@ class VCContacts: UIViewController , UITextFieldDelegate, UIPickerViewDelegate, 
         presentViewController(contactPickerViewController, animated: true, completion: nil)
     }
     
+    
+    // Delegate Methods
     // single selection
     func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
         print("contactPicker : didSelectContact")
         //delegate.didFetchContacts([contact])
-        print([contact])
-        //navigationController?.popViewControllerAnimated(true)
+        print(contact)
     }
+    /*
+    // multi select
+    func contactPicker(picker: CNContactPickerViewController, didSelectContacts contacts: [CNContact]){
+        print("contactPicker : didSelectContacts")
+        print(contacts)
+    }
+    */
 }
