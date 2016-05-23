@@ -55,16 +55,19 @@ class VCMyContactsUI: UITableViewController {
     }
     func retrieveContactsWithStore(store: CNContactStore) {
         do {
-            let groups = try store.groupsMatchingPredicate(nil)
-            let predicate = CNContact.predicateForContactsInGroupWithIdentifier(groups[0].identifier)
+            //let groups = try store.groupsMatchingPredicate(nil)
+            //let predicate = CNContact.predicateForContactsInGroupWithIdentifier(groups[0].identifier)
             //let predicate = CNContact.predicateForContactsMatchingName("John")
             let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName), CNContactEmailAddressesKey]
+            //let contacts = try store.unifiedContactsMatchingPredicate(predicate, keysToFetch: keysToFetch)
+            
+            // ref : https://fullstackpug.wordpress.com/2015/09/20/ios-9-contacts-framework-get-all-contacts/
+            let containerId = CNContactStore.defaultContainerIdentifier(store)
+            let predicate = CNContact.predicateForContactsInContainerWithIdentifier(containerId())
             let contacts = try store.unifiedContactsMatchingPredicate(predicate, keysToFetch: keysToFetch)
+            //
+            
             self.objects = contacts
-            
-            //print(self.objects)
-            
-            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView.reloadData()
             })
