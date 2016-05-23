@@ -48,17 +48,18 @@ class VCContacts: UIViewController , CNContactPickerDelegate {
     
     
     // Delegate Methods
+    /*
     // single selection
     func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
         print("contactPicker : didSelectContact")
         //delegate.didFetchContacts([contact])
         print(contact)
-    }
-    /*
+    }*/
+    
     // multi select
     func contactPicker(picker: CNContactPickerViewController, didSelectContacts contacts: [CNContact]){
         print("contactPicker : didSelectContacts")
         print(contacts)
     }
-    */
+    
 }

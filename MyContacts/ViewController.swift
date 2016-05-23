@@ -12,7 +12,7 @@ import Contacts
 
 // class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddContactViewControllerDelegate
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddContactViewControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var contacts = [CNContact]()
     
@@ -86,16 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("idCellContactBirthday")
         return cell!
     }
-    
-    //
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let identifier = segue.identifier {
-            if identifier == "idSegueAddContact" {
-                let addContactViewController = segue.destinationViewController as! AddContactViewController
-                addContactViewController.delegate = self
-            }
-        }
-    }
+   
 
 
 }
