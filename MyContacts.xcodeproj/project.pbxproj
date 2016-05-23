@@ -14,6 +14,7 @@
 		AE8F08A91CF2E2A9004048A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8F08A71CF2E2A9004048A0 /* LaunchScreen.storyboard */; };
 		AE8F08B11CF2E318004048A0 /* VCRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8F08B01CF2E318004048A0 /* VCRoot.swift */; };
 		AE8F08B31CF2E657004048A0 /* VCContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8F08B21CF2E657004048A0 /* VCContacts.swift */; };
+		AE8F08B91CF340D1004048A0 /* VCMyContactsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8F08B81CF340D1004048A0 /* VCMyContactsUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AE8F08AA1CF2E2A9004048A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE8F08B01CF2E318004048A0 /* VCRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRoot.swift; sourceTree = "<group>"; };
 		AE8F08B21CF2E657004048A0 /* VCContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCContacts.swift; sourceTree = "<group>"; };
+		AE8F08B81CF340D1004048A0 /* VCMyContactsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMyContactsUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AE8F08A01CF2E2A9004048A0 /* ViewController.swift */,
 				AE8F08B01CF2E318004048A0 /* VCRoot.swift */,
 				AE8F08B21CF2E657004048A0 /* VCContacts.swift */,
+				AE8F08B81CF340D1004048A0 /* VCMyContactsUI.swift */,
 				AE8F08A21CF2E2A9004048A0 /* Main.storyboard */,
 				AE8F08A51CF2E2A9004048A0 /* Assets.xcassets */,
 				AE8F08A71CF2E2A9004048A0 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8F08B91CF340D1004048A0 /* VCMyContactsUI.swift in Sources */,
 				AE8F08B11CF2E318004048A0 /* VCRoot.swift in Sources */,
 				AE8F08A11CF2E2A9004048A0 /* ViewController.swift in Sources */,
 				AE8F089F1CF2E2A9004048A0 /* AppDelegate.swift in Sources */,
