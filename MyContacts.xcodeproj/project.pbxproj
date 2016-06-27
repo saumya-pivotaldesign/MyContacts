@@ -65,8 +65,8 @@
 				AE8F08B01CF2E318004048A0 /* VCRoot.swift */,
 				AE8F08B21CF2E657004048A0 /* VCContacts.swift */,
 				AE8F08B81CF340D1004048A0 /* VCMyContactsUI.swift */,
-				AE8F08A21CF2E2A9004048A0 /* Main.storyboard */,
 				AE8F08A51CF2E2A9004048A0 /* Assets.xcassets */,
+				AE8F08A21CF2E2A9004048A0 /* Main.storyboard */,
 				AE8F08A71CF2E2A9004048A0 /* LaunchScreen.storyboard */,
 				AE8F08AA1CF2E2A9004048A0 /* Info.plist */,
 			);
